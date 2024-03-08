@@ -1,0 +1,37 @@
+.item-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+
+  &__item-name {
+    margin: 0;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}

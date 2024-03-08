@@ -1,0 +1,9 @@
+<main class="item-list">
+  <h1 class="item-list__title">Список товаров</h1>
+  <mat-progress-spinner class="item-list__loading" *ngIf="isLoadingList" [diameter]="50" mode="indeterminate"></mat-progress-spinner>
+  <ul *ngIf="!isLoadingList" class="item-list__items">
+    <li *ngFor="let item of items" class="item-list__item">
+      <a [routerLink]="[item.id]" class="item-list__item-name">{{ item.name }}</a>
+    </li>
+  </ul>
+</main>

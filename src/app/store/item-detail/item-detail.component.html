@@ -1,0 +1,9 @@
+<main class="item-detail">
+  <mat-progress-spinner class="item-detail__loading" *ngIf="isLoadingItem" [diameter]="50" mode="indeterminate"></mat-progress-spinner>
+  <div *ngIf="!isLoadingItem" class="item-detail__info">
+    <h1 class="item-detail__info__title">{{ item.name }}</h1>
+    <p class="item-detail__info__category">{{ item.category }}</p>
+    <p class="item-detail__info__description">{{ item.description }}</p>
+    <p class="item-detail__info__price">Цена: {{ item.price | currency: 'RUB': 'symbol-narrow' }}</p>
+  </div>
+</main>

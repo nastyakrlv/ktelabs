@@ -1,0 +1,38 @@
+.item-detail {
+  display: flex;
+  justify-content: center;
+
+  &__loading {
+    margin: 40px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
+
+    &__category {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+      font-style: italic;
+    }
+
+    &__description {
+      font-size: 16px;
+      color: #333;
+    }
+
+    &__price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #009688;
+      margin: 0;
+    }
+  }
+}

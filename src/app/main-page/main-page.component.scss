@@ -1,0 +1,27 @@
+.main-page {
+  text-align: center;
+  margin: 50px 0;
+
+  &__title {
+    font-size: 36px;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #666;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

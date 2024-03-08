@@ -1,0 +1,34 @@
+<main class="add-new-item">
+  <h1 class="add-new-item__title">Добавить новый товар</h1>
+  <form class="add-new-item__form" #addNewItemFormReset="ngForm" [formGroup]="addNewItemForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="add-new-item__form__field">
+      <mat-label>Название</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="addNewItemForm.get('name')?.hasError('invalidName')">Нельзя использовать спецсимволы</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="add-new-item__form__field">
+      <mat-label>Категория</mat-label>
+      <input matInput formControlName="category">
+    </mat-form-field>
+
+    <mat-form-field class="add-new-item__form__field">
+      <mat-label>Описание</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+      <mat-error *ngIf="addNewItemForm.get('description')?.hasError('invalidDescriptionLength')">Длина описания не
+        должна превышать 60 символов
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="add-new-item__form__field">
+      <mat-label>Цена</mat-label>
+      <input matInput type="number" formControlName="price">
+      <mat-error *ngIf="addNewItemForm.get('price')?.hasError('invalidPrice')">Цена должна быть больше нуля</mat-error>
+    </mat-form-field>
+
+    <button class="add-new-item__form__button" mat-raised-button type="submit" [disabled]="addNewItemForm.invalid">
+      Добавить
+    </button>
+  </form>
+
+</main>
