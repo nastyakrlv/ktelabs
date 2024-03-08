@@ -1,27 +1,39 @@
-# Ktelabs
+# KTELabs 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
 
-## Development server
+## Содержание
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Технологии](#технологии)
+- [Требования](#требования)
+- [Запуск](#запуск)
 
-## Code scaffolding
+## Технологии
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17.2.3.
+- RxJS
+- HTML
+- SCSS
+- TypeScript
+- Angular Material
 
-## Build
+## Требования
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Написать приложение-каталог
 
-## Running unit tests
+* Реализовать страницы:
+  + Список items
+  + Страница детальной информации item (переход на эту страницу осуществляется при клике на название item'а на странице "Список items")
+  + Страница добавления нового item в список items
+* Обязательно использовать технологии
+  + Lazy loading modules
+  + Получение данных по http
+  + Scss, вёрстка на flexbox'ах с применением методологии БЭМ
+  + Reactive forms + custom validation (на странице создания нового item)
+* По возможности использовать:
+  + RxJS
+  + Angular material + theming angular material
+ 
+## Запуск
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Обязательно запускать приложение через `npm start`, так как вместе с сайтом поднимается json-server.
